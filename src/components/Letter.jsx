@@ -3,11 +3,12 @@ import { AppContext } from "../App";
 
 const Letter = ({ letterPos, attemptVal }) => {
   const { board, rightWord, currAttempt } = useContext(AppContext);
+
   const letter = board[attemptVal][letterPos];
 
   const correct = rightWord[letterPos] === letter;
 
-  const almost = !correct && letter === "" && rightWord.includes(letter);
+  const almost = !correct && letter !== "" && rightWord.includes(letter);
 
   const letterState =
     currAttempt.attempt > attemptVal &&

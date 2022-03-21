@@ -38,8 +38,9 @@ nav h1 {
 
 .board {
   width: 450px;
-  height: 550px;
+  height: 650px;
   border: 1px solid black;
+  padding-bottom: 10px;
   display: flex;
   flex-direction: column;
 }
