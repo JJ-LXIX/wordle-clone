@@ -21,7 +21,7 @@ function App() {
   useEffect(() => {
     generateWordSet().then((words) => {
       setWordSet(words.wordSet);
-      console.log(words.wordSet);
+
       setRightWord(words.todaysWord);
     });
   }, []);
@@ -59,7 +59,7 @@ function App() {
       setGameOver({ gameOver: true, guessedWord: true });
       return;
     }
-    console.log(currAttempt);
+
     if (currAttempt.attempt === 5) {
       setGameOver({ gameOver: true, guessedWord: false });
       return;
