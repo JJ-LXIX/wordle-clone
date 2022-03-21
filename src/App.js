@@ -43,7 +43,7 @@ function App() {
   };
 
   const onEnter = () => {
-    if (currAttempt.letter !== 5) return;
+    if (currAttempt.letterPos !== 5) return;
 
     let currWord = "";
     for (let i = 0; i < 5; i++) {
