@@ -43,25 +43,26 @@ function App() {
   };
 
   const onEnter = () => {
-    if (currAttempt.letterPos !== 5) return;
+    if (currAttempt.letter !== 5) return;
 
     let currWord = "";
     for (let i = 0; i < 5; i++) {
       currWord += board[currAttempt.attempt][i];
     }
-
     if (wordSet.has(currWord.toLowerCase())) {
-      setCurrAttempt({ attempt: currAttempt.attempt + 1, letterPos: 0 });
+      setCurrAttempt({ attempt: currAttempt.attempt + 1, letter: 0 });
     } else {
-      alert("Word not Found");
+      alert("Word not found");
     }
-    if (currWord.toLocaleLowerCase() === rightWord) {
+
+    if (currWord === rightWord) {
       setGameOver({ gameOver: true, guessedWord: true });
-      alert("Congratulations! Reload page for another game !");
       return;
     }
+    console.log(currAttempt);
     if (currAttempt.attempt === 5) {
       setGameOver({ gameOver: true, guessedWord: false });
+      return;
     }
   };
 
