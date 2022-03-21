@@ -43,14 +43,14 @@ function App() {
   };
 
   const onEnter = () => {
-    if (currAttempt.attempt !== 5) return;
+    if (currAttempt.letterPos !== 5) return;
 
     let currWord = "";
     for (let i = 0; i < 5; i++) {
       currWord += board[currAttempt.attempt][i];
     }
     if (wordSet.has(currWord.toLowerCase())) {
-      setCurrAttempt({ attempt: currAttempt.attempt + 1, letter: 0 });
+      setCurrAttempt({ attempt: currAttempt.attempt + 1, letterPos: 0 });
     } else {
       alert("Word not found");
     }
