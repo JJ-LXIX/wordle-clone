@@ -20,6 +20,7 @@ const Letter = ({ letterPos, attemptVal }) => {
     if (letter !== "" && !correct && !almost) {
       setDisabledLetters((prev) => [...prev, letter]);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currAttempt.attempt]);
 
   return (
