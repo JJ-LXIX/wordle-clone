@@ -22,7 +22,6 @@ function App() {
     generateWordSet().then((words) => {
       setWordSet(words.wordSet);
       setRightWord(words.todaysWord);
-      console.log(words.wordSet);
     });
   }, []);
 
@@ -55,8 +54,9 @@ function App() {
     } else {
       alert("Word not Found");
     }
-    if (currWord === rightWord) {
+    if (currWord.toLocaleLowerCase() === rightWord) {
       setGameOver({ gameOver: true, guessedWord: true });
+      alert("Congratulations! Reload page for another game !");
       return;
     }
     if (currAttempt.attempt === 5) {
