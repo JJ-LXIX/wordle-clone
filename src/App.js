@@ -55,7 +55,7 @@ function App() {
       alert("Word not found");
     }
 
-    if (currWord === rightWord) {
+    if (currWord.toLocaleLowerCase === rightWord) {
       setGameOver({ gameOver: true, guessedWord: true });
       return;
     }
