@@ -2,6 +2,10 @@ import React, { useContext } from "react";
 import { AppContext } from "../App";
 
 const Gameover = () => {
+  const pageReload = () => {
+    window.location.reload();
+  };
+
   const { gameOver, rightWord, currAttempt } = useContext(AppContext);
   return (
     <div className="gameOver">
@@ -10,6 +14,9 @@ const Gameover = () => {
       {gameOver.gussedWord && (
         <h3> You guessed in {currAttempt.attempt} attempts</h3>
       )}
+      <button onClick={pageReload} className="go__again">
+        Go Again!
+      </button>
     </div>
   );
 };

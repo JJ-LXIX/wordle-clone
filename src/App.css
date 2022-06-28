@@ -135,3 +135,17 @@ nav h1 {
   color: white;
   font-size: 1.563rem;
 }
+
+.go__again{
+  background-color: #fff;
+  border-color: #fff;
+  padding:1rem;
+  color: #000;
+  font-size: 2rem;
+}
+
+.go__again:active{
+  transform: scale(.7);
+  transition: all 0.5s ease;
+}
+
