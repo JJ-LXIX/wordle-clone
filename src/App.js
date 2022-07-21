@@ -22,7 +22,9 @@ function App() {
     generateWordSet().then((words) => {
       setWordSet(words.wordSet);
       setRightWord(words.todaysWord);
-      
+      console.log(
+        `Since this is a test project, here's the answer: ${words.todaysWord}`
+      );
     });
   }, []);
 
