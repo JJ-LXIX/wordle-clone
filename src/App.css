@@ -152,3 +152,7 @@ nav h1 {
 @media screen and (min-width: 0px) and (max-width: 700px) {
   .App { display: none; }  /* hide it on small screens */
 }
+
+@media screen and (min-width:701px){
+  .mobile__text {display:none;}
+}
