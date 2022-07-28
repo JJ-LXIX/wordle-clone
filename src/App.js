@@ -28,7 +28,7 @@ function App() {
     });
   }, []);
 
-  console.log(rightWord);
+  
 
   const onSelectLetter = (keyVal) => {
     if (currAttempt.letterPos > 4) return;
