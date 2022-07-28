@@ -21,6 +21,7 @@ function App() {
   useEffect(() => {
     generateWordSet().then((words) => {
       setWordSet(words.wordSet);
+      console.log(wordSet);
       setRightWord(words.todaysWord);
       console.log(
         `Since this is a test project, here's the answer: ${words.todaysWord}`
