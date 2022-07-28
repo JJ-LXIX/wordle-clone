@@ -71,6 +71,8 @@ function App() {
   };
 
   return (
+    <div>
+    <h1 className="mobile__text">Please visit this website through a laptop or a PC.</h1>
     <div className="App">
       <nav>
         <h1>Wordle</h1>
@@ -97,6 +99,7 @@ function App() {
         </div>
       </AppContext.Provider>
     </div>
+</div>
   );
 }
 
