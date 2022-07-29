@@ -54,13 +54,13 @@ function App() {
     for (let i = 0; i < 5; i++) {
       currWord += board[currAttempt.attempt][i];
     }
-    if (wordSet.has(currWord.toLowerCase() + "\r")) {
+    if (wordSet.has(currWord.toLowerCase() )) {
       setCurrAttempt({ attempt: currAttempt.attempt + 1, letterPos: 0 });
     } else {
       alert("Word not found");
     }
 
-    if (currWord.toLowerCase() + "\r" === rightWord) {
+    if (currWord.toLowerCase()  === rightWord) {
       setGameOver({ gameOver: true, guessedWord: true });
       return;
     }
